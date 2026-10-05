@@ -851,7 +851,15 @@
         function toggleAdminModal(defaultTab = 'general') {
             const modal = document.getElementById('admin-modal');
             const isHidden = modal.classList.contains('hidden');
+            
             if (isHidden) {
+                // Minta PIN / Kata Sandi sebelum membuka
+                const password = prompt("Masukkan PIN Administrator Etto Agency:");
+                if (password !== "1234") { // Ganti 1234 dengan PIN rahasia Anda
+                    alert("Akses ditolak! PIN salah.");
+                    return;
+                }
+                
                 modal.classList.remove('hidden');
                 populateAdminFields();
                 switchAdminTab(defaultTab);
