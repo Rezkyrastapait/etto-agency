@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etto Agency — Let Your Brand Speak</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        etto: {
+                            blue: '#1d4ed8',
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#3b82f6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif-title { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Top Notice / Admin Access Bar -->
+    <div class="bg-slate-900 text-slate-300 px-4 py-2 text-xs flex justify-between items-center border-b border-slate-800">
+        <div class="flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Etto Agency Official Profile & Pricelist (Est. 2026)</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="toggleAdminModal()" class="flex items-center gap-1.5 px-2.5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded font-medium transition shadow-sm">
+                <i data-lucide="settings" class="w-3.5 h-3.5"></i>
+                <span>Kelola Konten (Mode Admin)</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-105 transition">
+                    e
+                </div>
+                <div>
+                    <span id="nav-brand-name" class="text-2xl font-extrabold tracking-tight text-slate-900">etto<span class="text-blue-600">.</span></span>
+                    <span class="block text-[10px] font-semibold tracking-widest text-slate-400 uppercase -mt-1">agency</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition">Tentang Kami</a>
+                <a href="#services" class="hover:text-blue-600 transition">Layanan</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Paket & Harga</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Portofolio</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a id="btn-nav-wa" href="#" target="_blank" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full text-sm font-semibold shadow-md shadow-blue-500/20 transition transform hover:-translate-y-0.5">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Konsultasi Proyek</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden bg-gradient-to-b from-blue-50/50 via-white to-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider mb-6">
+                    <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                    Est. 2026 Creative Agency
+                </div>
+                <h1 id="hero-headline" class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1] mb-6 max-w-4xl mx-auto">
+                    Let Your Brand <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Speak.</span>
+                </h1>
+                <p id="hero-subheadline" class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Tidak semua brand membutuhkan lebih banyak hal. Terkadang, yang dibutuhkan adalah cara yang tepat untuk menyampaikan siapa mereka melalui ide, visual, dan strategi yang dirancang sesuai karakter brand.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a id="hero-cta-wa" href="#" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-base shadow-xl shadow-blue-600/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                        <i data-lucide="send" class="w-5 h-5"></i>
+                        <span>Mulai Proyek Bersama Kami</span>
+                    </a>
+                    <a href="#pricing" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 rounded-xl font-bold text-base shadow-sm transition flex items-center justify-center gap-2">
+                        <i data-lucide="tag" class="w-5 h-5 text-slate-400"></i>
+                        <span>Lihat Paket Harga</span>
+                    </a>
+                </div>
+
+                <!-- Trust Badge -->
+                <div class="mt-16 pt-8 border-t border-slate-200/60 max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-8 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                    <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Brand Identity</span>
+                    <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Social Media</span>
+                    <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Packaging</span>
+                    <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Illustration</span>
+                    <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-500"></i> Web Creation</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white border-y border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Tentang Etto Agency</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-6 font-serif-title">
+                            Your story deserves a creative space.
+                        </h2>
+                        <div id="about-content" class="space-y-4 text-slate-600 leading-relaxed text-base">
+                            <p>
+                                <strong>Etto Agency</strong> hadir untuk membantu brand menemukan jati diri dan menyuarakannya kepada audiens yang tepat. Kami percaya bahwa visual yang kuat bukan sekadar estetika, melainkan jembatan komunikasi yang membangun rasa percaya dan koneksi emosional.
+                            </p>
+                            <p>
+                                Dari perancangan identitas merek dari nol, strategi pengelolaan media sosial harian, desain kemasan produk siap cetak, hingga ilustrasi maskot yang unik—kami berdedikasi menciptakan karya yang terkonsep dan berdampak nyata.
+                            </p>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-3 gap-6 pt-6 border-t border-slate-100">
+                            <div>
+                                <span class="text-3xl font-extrabold text-blue-600 block">100%</span>
+                                <span class="text-xs font-medium text-slate-500">Kustom Sesuai Karakter Brand</span>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold text-blue-600 block">6+</span>
+                                <span class="text-xs font-medium text-slate-500">Layanan Kreatif Terintegrasi</span>
+                            </div>
+                            <div>
+                                <span class="text-3xl font-extrabold text-blue-600 block">2026</span>
+                                <span class="text-xs font-medium text-slate-500">Est. Standar Desain Modern</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="rounded-3xl bg-gradient-to-tr from-blue-600 to-indigo-700 p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+                            <div class="relative z-10">
+                                <span class="text-blue-200 text-xs font-mono uppercase tracking-widest">Etto Creative Philosophy</span>
+                                <blockquote class="text-2xl sm:text-3xl font-serif-title italic font-medium my-6 leading-snug">
+                                    "Tidak semua brand membutuhkan lebih banyak hal. Terkadang, yang dibutuhkan adalah cara yang tepat untuk menyampaikan siapa mereka."
+                                </blockquote>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold">E</div>
+                                    <div>
+                                        <div class="font-bold text-sm">Etto Agency Creative Team</div>
+                                        <div class="text-xs text-blue-200">Creative & Visual Direction</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Our Services</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        What we can do for your brand
+                    </h2>
+                    <p class="text-slate-600 mt-4 text-base">
+                        Solusi kreatif menyeluruh untuk membangun, memperkuat, dan memperluas kehadiran bisnis Anda.
+                    </p>
+                </div>
+
+                <div id="services-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & Packages Section -->
+        <section id="pricing" class="py-24 bg-white border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Daftar Paket & Biaya Investasi</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Pilihan Paket Transparan Sesuai Skala Bisnis
+                    </h2>
+                    <p class="text-slate-600 mt-3 text-base">
+                        Pilih kategori layanan di bawah untuk melihat rincian paket dan deliverables lengkap.
+                    </p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
+                    <div id="pricing-tabs" class="inline-flex p-1.5 bg-slate-100 rounded-2xl gap-1">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Pricing Cards Container -->
+                <div id="pricing-cards-container" class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Add-Ons Notice / Dynamic Note -->
+                <div id="pricing-addons-container" class="mt-12 max-w-4xl mx-auto">
+                    <!-- Populated if Addons exist -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase Preview -->
+        <section id="portfolio" class="py-24 bg-slate-50 border-t border-slate-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-2">Portofolio & Visual Style</span>
+                        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Karya Kreatif Kami</h2>
+                        <p class="text-slate-600 mt-2 text-sm">Contoh penerapan gaya visual, packaging, dan brand assets.</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <button onclick="toggleAdminModal('portfolio')" class="text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 flex items-center gap-1.5">
+                            <i data-lucide="plus-circle" class="w-4 h-4"></i> Kelola Portofolio di Admin
+                        </button>
+                    </div>
+                </div>
+
+                <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Banner -->
+        <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6 font-serif-title">
+                    Ready to Make Your Brand Move?
+                </h2>
+                <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                    "Let's create something that makes your brand seen, felt, and remembered."
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a id="footer-cta-wa" href="#" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold text-base shadow-xl shadow-blue-500/25 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        <span>Hubungi WhatsApp Sekarang</span>
+                    </a>
+                </div>
+            </div>
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-base">e</div>
+                <span class="font-extrabold text-white text-lg">etto<span class="text-blue-500">.</span>agency</span>
+                <span class="text-xs text-slate-500 ml-2">© 2026. All rights reserved.</span>
+            </div>
+
+            <div class="flex items-center gap-6 text-xs">
+                <span>Kota Tanjungpinang, Kepulauan Riau</span>
+                <span>•</span>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#pricing" class="hover:text-white transition">Pricelist</a>
+                <button onclick="toggleAdminModal()" class="text-blue-400 hover:text-blue-300 font-semibold">Admin Panel</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL / ADMIN MANAGEMENT SYSTEM (CMS)     -->
+    <!-- ========================================== -->
+    <div id="admin-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden border border-slate-200">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+                        <i data-lucide="sliders" class="w-4 h-4 text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-base">Etto Agency CMS — Panel Manajemen Konten</h3>
+                        <p class="text-xs text-slate-400">Ubah harga, layanan, nomor WhatsApp, dan portofolio secara instan</p>
+                    </div>
+                </div>
+                <button onclick="toggleAdminModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Modal Nav Tabs -->
+            <div class="flex border-b border-slate-200 bg-slate-50 px-6 pt-3 gap-2 overflow-x-auto text-xs font-bold">
+                <button onclick="switchAdminTab('general')" id="tab-btn-general" class="admin-tab-btn px-4 py-2.5 rounded-t-lg border-b-2 border-blue-600 text-blue-600 bg-white">
+                    Identitas & Kontak
+                </button>
+                <button onclick="switchAdminTab('pricing')" id="tab-btn-pricing" class="admin-tab-btn px-4 py-2.5 rounded-t-lg border-b-2 border-transparent text-slate-500 hover:text-slate-900">
+                    Paket & Pricelist
+                </button>
+                <button onclick="switchAdminTab('portfolio')" id="tab-btn-portfolio" class="admin-tab-btn px-4 py-2.5 rounded-t-lg border-b-2 border-transparent text-slate-500 hover:text-slate-900">
+                    Portofolio Galeri
+                </button>
+                <button onclick="switchAdminTab('backup')" id="tab-btn-backup" class="admin-tab-btn px-4 py-2.5 rounded-t-lg border-b-2 border-transparent text-slate-500 hover:text-slate-900">
+                    Ekspor / Impor JSON
+                </button>
+            </div>
+
+            <!-- Modal Body (Tab Contents) -->
+            <div class="p-6 overflow-y-auto flex-1 space-y-6">
+                <!-- Tab 1: General Info -->
+                <div id="admin-panel-general" class="admin-tab-content space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nama Brand / Agensi</label>
+                            <input id="input-brand-name" type="text" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Nomor WhatsApp (Format: 628xxx)</label>
+                            <input id="input-wa-number" type="text" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none" placeholder="6281234567890">
+                            <span class="text-[11px] text-slate-400">Tombol WhatsApp di web akan otomatis memakai nomor ini</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Headline Utama (Hero)</label>
+                        <input id="input-hero-headline" type="text" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Deskripsi Tagline / Bio</label>
+                        <textarea id="input-hero-subheadline" rows="3" class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Pricing Manager -->
+                <div id="admin-panel-pricing" class="admin-tab-content hidden space-y-6">
+                    <div class="flex items-center justify-between bg-blue-50 p-4 rounded-xl text-blue-900">
+                        <span class="text-xs font-semibold">Pilih kategori layanan yang ingin diubah daftar harga dan fitur paketnya:</span>
+                        <select id="admin-category-selector" onchange="renderAdminCategoryPackages()" class="px-3 py-1.5 bg-white border border-blue-200 rounded-lg text-xs font-bold">
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                    <div id="admin-packages-list" class="space-y-4">
+                        <!-- Editable cards populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 3: Portfolio Manager -->
+                <div id="admin-panel-portfolio" class="admin-tab-content hidden space-y-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-700 uppercase">Daftar Portofolio</span>
+                        <button onclick="addPortfolioItem()" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold flex items-center gap-1">
+                            <i data-lucide="plus" class="w-3.5 h-3.5"></i> Tambah Item Baru
+                        </button>
+                    </div>
+                    <div id="admin-portfolio-list" class="space-y-3">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Tab 4: Export/Import/Backup -->
+                <div id="admin-panel-backup" class="admin-tab-content hidden space-y-4">
+                    <div class="bg-amber-50 border border-amber-200 text-amber-800 p-4 rounded-xl text-xs leading-relaxed">
+                        <strong>Tips Manajemen:</strong> Semua perubahan disimpan otomatis di peramban (localStorage) komputer/perangkat Anda. Bila ingin memindahkannya ke server produksi atau komputer lain, klik <strong>Salin JSON Data</strong> di bawah.
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Konfigurasi JSON (Salin atau Tempel Data Baru)</label>
+                        <textarea id="json-raw-editor" rows="7" class="w-full font-mono text-xs p-3 border rounded-lg bg-slate-50 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button onclick="copyCurrentJSON()" class="px-4 py-2 bg-slate-800 text-white rounded-lg text-xs font-semibold hover:bg-slate-700">Salin JSON ke Clipboard</button>
+                        <button onclick="importJSONData()" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-xs font-semibold hover:bg-blue-500">Terapkan JSON yang Ditempel</button>
+                        <button onclick="resetToFactoryDefault()" class="px-4 py-2 bg-rose-50 text-rose-600 border border-rose-200 rounded-lg text-xs font-semibold hover:bg-rose-100">Kembalikan ke Default Dokumen Etto</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 bg-slate-100 border-t border-slate-200 flex items-center justify-between">
+                <span id="save-status-indicator" class="text-xs text-slate-500 font-medium">Data tersinkron otomatis.</span>
+                <div class="flex gap-2">
+                    <button onclick="toggleAdminModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-lg text-xs font-bold transition">Tutup</button>
+                    <button onclick="saveAllAdminChanges()" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition shadow-md flex items-center gap-1.5">
+                        <i data-lucide="check" class="w-4 h-4"></i> Simpan & Perbarui Tampilan Web
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a id="floating-wa-btn" href="#" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition transform hover:scale-110 group">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 text-xs font-bold">Chat WhatsApp</span>
+    </a>
+
+    <!-- SCRIPT APPLICATION LOGIC -->
+    <script>
+        // Data Dokumen Etto Agency Default (Berdasarkan PDF Pricelist Etto Agency Est. 2026)
+        const DEFAULT_ETTO_DATA = {
+            brandName: "Etto Agency",
+            whatsapp: "6281234567890", // Ganti dengan nomor asli
+            heroHeadline: "Let Your Brand Speak.",
+            heroSubheadline: "Tidak semua brand membutuhkan lebih banyak hal. Terkadang, yang dibutuhkan adalah cara yang tepat untuk menyampaikan siapa mereka melalui ide, visual, dan strategi yang dirancang sesuai karakter brand.",
+            services: [
+                {
+                    id: "identity",
+                    title: "Brand Identity",
+                    icon: "palette",
+                    desc: "Membangun identitas visual yang kuat dan konsisten untuk membuat brand lebih mudah dikenali, mulai dari logo, warna, tipografi, hingga elemen visual pendukung."
+                },
+                {
+                    id: "social",
+                    title: "Social Media Management",
+                    icon: "share-2",
+                    desc: "Membantu brand tampil konsisten dan aktif di media sosial melalui perencanaan konten, desain visual, copywriting, hingga pengelolaan konten yang sesuai dengan karakter brand."
+                },
+                {
+                    id: "packaging",
+                    title: "Packaging Design",
+                    icon: "package",
+                    desc: "Merancang kemasan yang tidak hanya menarik secara visual, tetapi juga mampu menyampaikan karakter dan nilai brand sekaligus menciptakan pengalaman yang berkesan bagi konsumen."
+                },
+                {
+                    id: "illustration",
+                    title: "Illustration",
+                    icon: "brush",
+                    desc: "Menciptakan ilustrasi yang unik dan memiliki karakter, baik untuk kebutuhan buku maupun non-buku seperti editorial, campaign, merchandise, hingga kebutuhan visual brand."
+                },
+                {
+                    id: "photo_video",
+                    title: "Photography & Videography",
+                    icon: "camera",
+                    desc: "Menghadirkan visual yang menarik untuk memperkuat karakter brand melalui foto dan video yang terkonsep, relevan, dan sesuai dengan kebutuhan komunikasi brand."
+                },
+                {
+                    id: "website",
+                    title: "Website Creation",
+                    icon: "globe",
+                    desc: "Membangun website yang informatif, fungsional, dan memiliki tampilan visual yang selaras dengan identitas brand untuk memberikan pengalaman digital yang lebih profesional."
+                }
+            ],
+            pricingCategories: [
+                {
+                    id: "identity",
+                    name: "Brand Identity",
+                    packages: [
+                        {
+                            name: "Basic Package",
+                            price: "Rp250.000",
+                            popular: false,
+                            revision: "Maksimal 2x revisi",
+                            features: [
+                                "1 logo utama & 1 logo alternatif",
+                                "1 ikon / logomark",
+                                "Palet warna & tipografi",
+                                "Basic logo guideline"
+                            ]
+                        },
+                        {
+                            name: "Standard Package",
+                            price: "Rp500.000",
+                            popular: true,
+                            revision: "Maksimal 3x revisi",
+                            features: [
+                                "1 logo utama & 1 logo alternatif",
+                                "1 ikon / logomark",
+                                "Palet warna & tipografi",
+                                "Basic pattern",
+                                "Basic brand guideline",
+                                "2 template desain postingan IG",
+                                "Desain kartu nama"
+                            ]
+                        },
+                        {
+                            name: "Premium Package",
+                            price: "Rp1.000.000",
+                            popular: false,
+                            revision: "Maksimal 4x revisi",
+                            features: [
+                                "1 logo utama & 1 logo alternatif",
+                                "1 ikon / logomark",
+                                "Palet warna & tipografi",
+                                "Basic pattern",
+                                "Brand guideline lengkap",
+                                "3 template postingan Instagram",
+                                "Stationery & Merchandise",
+                                "Mockup penerapan lengkap"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "social",
+                    name: "Social Media",
+                    packages: [
+                        {
+                            name: "Starter Package",
+                            price: "Rp500.000",
+                            popular: false,
+                            revision: "Maksimal 2x revisi per konten",
+                            features: [
+                                "1 platform media sosial",
+                                "8 desain feed + 2 reels + 8 IG story",
+                                "Content planning & Content calendar",
+                                "Copywriting caption & Hashtag research",
+                                "Scheduling & posting rutin",
+                                "Monthly performance report"
+                            ]
+                        },
+                        {
+                            name: "Growth Package",
+                            price: "Rp750.000",
+                            popular: true,
+                            revision: "Maksimal 2x revisi per konten",
+                            features: [
+                                "2 platform media sosial",
+                                "12 desain feed + 4 reels + 12 IG story",
+                                "Content planning & Content calendar",
+                                "Copywriting caption & Hashtag research",
+                                "Scheduling & posting teratur",
+                                "Monthly performance report"
+                            ]
+                        },
+                        {
+                            name: "Professional Package",
+                            price: "Rp1.000.000",
+                            popular: false,
+                            revision: "Maksimal 2x revisi per konten",
+                            features: [
+                                "2 platform media sosial",
+                                "20 desain feed + 6 reels + 20 IG story",
+                                "Content planning & Content calendar",
+                                "Copywriting caption & Hashtag research",
+                                "Scheduling & posting intensif",
+                                "Monthly performance report"
+                            ]
+                        }
+                    ],
+                    addons: [
+                        "Extra feed: Rp70.000/post",
+                        "Extra reels: Rp150.000/video",
+                        "Extra story: Rp30.000/story",
+                        "Carousel design: Rp150.000/carousel",
+                        "Foto produk: Mulai Rp100.000",
+                        "Video produk: Mulai Rp200.000",
+                        "Copywriting: Rp30.000/post"
+                    ]
+                },
+                {
+                    id: "packaging",
+                    name: "Packaging Design",
+                    packages: [
+                        {
+                            name: "Basic Package",
+                            price: "Rp200.000",
+                            popular: false,
+                            revision: "Maksimal 2x revisi",
+                            features: [
+                                "1 desain packaging",
+                                "1 ukuran / jenis kemasan",
+                                "Desain depan & belakang",
+                                "1 Mockup 3D",
+                                "File siap cetak (Print Ready)"
+                            ]
+                        },
+                        {
+                            name: "Standard Package",
+                            price: "Rp350.000",
+                            popular: true,
+                            revision: "Maksimal 3x revisi",
+                            features: [
+                                "1 desain packaging",
+                                "1 ukuran / jenis kemasan",
+                                "Desain seluruh sisi kemasan",
+                                "Layout & visual direction",
+                                "Elemen grafis pendukung",
+                                "2 Mockup 3D",
+                                "File siap cetak"
+                            ]
+                        },
+                        {
+                            name: "Premium Package",
+                            price: "Rp500.000",
+                            popular: false,
+                            revision: "Maksimal 3x revisi",
+                            features: [
+                                "Konsep & visual direction",
+                                "1 desain kemasan (2 alternatif)",
+                                "Desain seluruh sisi kemasan",
+                                "Custom illustration / graphic element",
+                                "3 Mockup realistis",
+                                "File siap cetak lengkap"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: "illustration",
+                    name: "Illustration",
+                    packages: [
+                        {
+                            name: "Character Headshot",
+                            price: "Rp30.000",
+                            popular: false,
+                            revision: "1x revisi",
+                            features: [
+                                "1 karakter bust-up",
+                                "Simple pose",
+                                "Full warna digital",
+                                "High resolution file"
+                            ]
+                        },
+                        {
+                            name: "Character Full Body",
+                            price: "Rp100.000",
+                            popular: true,
+                            revision: "1x revisi",
+                            features: [
+                                "1 karakter full body",
+                                "Bebas pilih pose & outfit",
+                                "Full warna + Background simpel",
+                                "File resolusi tinggi"
+                            ]
+                        },
+                        {
+                            name: "Paket Mascot Brand",
+                            price: "Rp500.000",
+                            popular: false,
+                            revision: "2x revisi",
+                            features: [
+                                "1 karakter mascot resmi brand",
+                                "Full body view",
+                                "3 variasi ekspresi",
+                                "3 variasi pose",
+                                "File vektor / raster siap guna"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            portfolio: [
+                {
+                    title: "Brand Identity & Guideline",
+                    category: "Brand Identity",
+                    img: "images/1163460_ORJA091.png",
+                    desc: "Perancangan identitas visual modern, palet warna pastel & guideline terpadu."
+                },
+                {
+                    title: "Packaging Snack & Coffee",
+                    category: "Packaging Design",
+                    img: "images/34.png",
+                    desc: "Desain kemasan stand pouch estetik dengan elemen visual berkarakter."
+                },
+                {
+                    title: "Social Media Feeds & Reels",
+                    category: "Social Media",
+                    img: "images/Free_iPhone_16_Mockup_3.png",
+                    desc: "Konsistensi layout feed Instagram dan storyboard reels dinamis."
+                },
+                {
+                    title: "Character & Mascot Illustration",
+                    category: "Illustration",
+                    img: "images/karakter.jpeg",
+                    desc: "Desain maskot 2D ekspresif untuk merchandise dan media kampanye."
+                },
+                {
+                    title: "Creative Website Profile",
+                    category: "Website Creation",
+                    img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80",
+                    desc: "Pengalaman web interaktif, cepat, dan mobile-first untuk instansi & UMKM."
+                },
+                {
+                    title: "Product Photography & Visuals",
+                    category: "Photography",
+                    img: "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=600&q=80",
+                    desc: "Foto studio produk dengan pencahayaan terkonsep dan komposisi bersih."
+                }
+            ]
+        };
+
+        // State Store
+        let appData = {};
+        let activePricingCategoryIndex = 0;
+
+        // Initialize Data from LocalStorage or Default
+        function initApp() {
+            const saved = localStorage.getItem('etto_agency_cms_data');
+            if (saved) {
+                try {
+                    appData = JSON.parse(saved);
+                } catch(e) {
+                    appData = JSON.parse(JSON.stringify(DEFAULT_ETTO_DATA));
+                }
+            } else {
+                appData = JSON.parse(JSON.stringify(DEFAULT_ETTO_DATA));
+            }
+            renderAll();
+        }
+
+        function renderAll() {
+            // Render Text Data
+            document.getElementById('nav-brand-name').innerHTML = `${appData.brandName.toLowerCase()}<span class="text-blue-600">.</span>`;
+            document.getElementById('hero-headline').innerText = appData.heroHeadline;
+            document.getElementById('hero-subheadline').innerText = appData.heroSubheadline;
+
+            // WhatsApp link helper
+            const waBase = `https://wa.me/${appData.whatsapp}?text=Halo%20${encodeURIComponent(appData.brandName)},%20saya%20tertarik%20untuk%20konsultasi%20layanan%20kreatif.`;
+            document.getElementById('btn-nav-wa').href = waBase;
+            document.getElementById('hero-cta-wa').href = waBase;
+            document.getElementById('footer-cta-wa').href = waBase;
+            document.getElementById('floating-wa-btn').href = waBase;
+
+            renderServices();
+            renderPricingTabs();
+            renderPricingCards();
+            renderPortfolio();
+
+            // Refresh Lucide Icons
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        }
+
+        // Render Services
+        function renderServices() {
+            const container = document.getElementById('services-grid');
+            container.innerHTML = appData.services.map(s => `
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i data-lucide="${s.icon || 'star'}" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">${s.title}</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">${s.desc}</p>
+                </div>
+            `).join('');
+        }
+
+        // Render Pricing Tabs
+        function renderPricingTabs() {
+            const container = document.getElementById('pricing-tabs');
+            container.innerHTML = appData.pricingCategories.map((cat, idx) => `
+                <button onclick="changePricingCategory(${idx})" class="px-4 py-2 rounded-xl text-xs font-bold transition ${activePricingCategoryIndex === idx ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-900'}">
+                    ${cat.name}
+                </button>
+            `).join('');
+        }
+
+        function changePricingCategory(idx) {
+            activePricingCategoryIndex = idx;
+            renderPricingTabs();
+            renderPricingCards();
+            if (window.lucide) lucide.createIcons();
+        }
+
+        // Render Pricing Cards
+        function renderPricingCards() {
+            const container = document.getElementById('pricing-cards-container');
+            const currentCat = appData.pricingCategories[activePricingCategoryIndex];
+            if (!currentCat) return;
+
+            container.innerHTML = currentCat.packages.map(pkg => {
+                const waOrder = `https://wa.me/${appData.whatsapp}?text=Halo%20${encodeURIComponent(appData.brandName)},%20saya%20ingin%20memesan%20${encodeURIComponent(currentCat.name + ' - ' + pkg.name)}%20(${encodeURIComponent(pkg.price)}).`;
+                return `
+                <div class="bg-white rounded-2xl border ${pkg.popular ? 'border-blue-600 ring-2 ring-blue-600 shadow-xl' : 'border-slate-200 shadow-sm'} p-8 flex flex-col justify-between relative transition hover:-translate-y-1">
+                    ${pkg.popular ? '<span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full tracking-wider shadow">Paling Populer</span>' : ''}
+                    <div>
+                        <div class="flex justify-between items-baseline mb-4">
+                            <h3 class="text-lg font-bold text-slate-900">${pkg.name}</h3>
+                        </div>
+                        <div class="mb-4">
+                            <span class="text-3xl font-extrabold text-slate-900">${pkg.price}</span>
+                        </div>
+                        <div class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md inline-block mb-6">
+                            ${pkg.revision}
+                        </div>
+                        <div class="space-y-3 mb-8">
+                            ${pkg.features.map(f => `
+                                <div class="flex items-start gap-2.5 text-xs text-slate-600">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"></i>
+                                    <span>${f}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <a href="${waOrder}" target="_blank" class="w-full py-3 rounded-xl font-bold text-xs text-center transition ${pkg.popular ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20' : 'bg-slate-100 hover:bg-slate-200 text-slate-800'}">
+                        Pesan Paket Ini via WhatsApp
+                    </a>
+                </div>
+            `}).join('');
+
+            // Add-ons
+            const addonContainer = document.getElementById('pricing-addons-container');
+            if (currentCat.addons && currentCat.addons.length > 0) {
+                addonContainer.innerHTML = `
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                        <h4 class="font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+                            <i data-lucide="plus-circle" class="w-4 h-4 text-blue-600"></i> Layanan Tambahan (Add-On Service)
+                        </h4>
+                        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs text-slate-600">
+                            ${currentCat.addons.map(a => `<div class="p-2 bg-white rounded-lg border border-slate-100 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>${a}</div>`).join('')}
+                        </div>
+                    </div>
+                `;
+            } else {
+                addonContainer.innerHTML = '';
+            }
+        }
+
+        // Render Portfolio
+        function renderPortfolio() {
+            const container = document.getElementById('portfolio-grid');
+            container.innerHTML = appData.portfolio.map(p => `
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm group hover:shadow-lg transition">
+                    <div class="h-48 overflow-hidden bg-slate-100 relative">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-md">
+                            ${p.category}
+                        </span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="font-bold text-slate-900 text-base mb-1">${p.title}</h4>
+                        <p class="text-xs text-slate-500 leading-relaxed">${p.desc}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ==========================================
+        // ADMIN CMS CONTROLLER
+        // ==========================================
+        function toggleAdminModal(defaultTab = 'general') {
+            const modal = document.getElementById('admin-modal');
+            const isHidden = modal.classList.contains('hidden');
+            if (isHidden) {
+                modal.classList.remove('hidden');
+                populateAdminFields();
+                switchAdminTab(defaultTab);
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        function switchAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.classList.remove('border-blue-600', 'text-blue-600', 'bg-white');
+                btn.classList.add('border-transparent', 'text-slate-500');
+            });
+            document.querySelectorAll('.admin-tab-content').forEach(c => c.classList.add('hidden'));
+
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            const activeContent = document.getElementById(`admin-panel-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.add('border-blue-600', 'text-blue-600', 'bg-white');
+                activeBtn.classList.remove('border-transparent', 'text-slate-500');
+            }
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+
+            if (tabName === 'pricing') {
+                populateAdminCategorySelector();
+                renderAdminCategoryPackages();
+            } else if (tabName === 'portfolio') {
+                renderAdminPortfolioList();
+            } else if (tabName === 'backup') {
+                document.getElementById('json-raw-editor').value = JSON.stringify(appData, null, 2);
+            }
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function populateAdminFields() {
+            document.getElementById('input-brand-name').value = appData.brandName;
+            document.getElementById('input-wa-number').value = appData.whatsapp;
+            document.getElementById('input-hero-headline').value = appData.heroHeadline;
+            document.getElementById('input-hero-subheadline').value = appData.heroSubheadline;
+        }
+
+        function populateAdminCategorySelector() {
+            const sel = document.getElementById('admin-category-selector');
+            sel.innerHTML = appData.pricingCategories.map((c, i) => `
+                <option value="${i}">${c.name}</option>
+            `).join('');
+        }
+
+        function renderAdminCategoryPackages() {
+            const selIdx = parseInt(document.getElementById('admin-category-selector').value || '0');
+            const cat = appData.pricingCategories[selIdx];
+            const list = document.getElementById('admin-packages-list');
+            if (!cat) return;
+
+            list.innerHTML = cat.packages.map((pkg, pIdx) => `
+                <div class="p-4 border rounded-xl bg-slate-50 space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-slate-800">Paket #${pIdx + 1}</span>
+                        <label class="text-xs flex items-center gap-1.5 font-medium text-slate-600">
+                            <input type="checkbox" ${pkg.popular ? 'checked' : ''} onchange="appData.pricingCategories[${selIdx}].packages[${pIdx}].popular = this.checked">
+                            Badge Terpopuler
+                        </label>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-3">
+                        <div>
+                            <label class="text-[10px] uppercase font-bold text-slate-500">Nama Paket</label>
+                            <input type="text" class="w-full px-2.5 py-1.5 border rounded text-xs bg-white" value="${pkg.name}" onchange="appData.pricingCategories[${selIdx}].packages[${pIdx}].name = this.value">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase font-bold text-slate-500">Harga</label>
+                            <input type="text" class="w-full px-2.5 py-1.5 border rounded text-xs bg-white" value="${pkg.price}" onchange="appData.pricingCategories[${selIdx}].packages[${pIdx}].price = this.value">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase font-bold text-slate-500">Batas Revisi</label>
+                            <input type="text" class="w-full px-2.5 py-1.5 border rounded text-xs bg-white" value="${pkg.revision}" onchange="appData.pricingCategories[${selIdx}].packages[${pIdx}].revision = this.value">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-slate-500">Fitur & Deliverables (Satu item per baris)</label>
+                        <textarea rows="3" class="w-full px-2.5 py-1.5 border rounded text-xs bg-white" onchange="appData.pricingCategories[${selIdx}].packages[${pIdx}].features = this.value.split('\n').filter(x => x.trim())">${pkg.features.join('\n')}</textarea>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderAdminPortfolioList() {
+            const list = document.getElementById('admin-portfolio-list');
+            list.innerHTML = appData.portfolio.map((p, idx) => `
+                <div class="p-3 border rounded-xl bg-slate-50 flex items-center gap-4 justify-between">
+                    <img src="${p.img}" class="w-12 h-12 rounded-lg object-cover">
+                    <div class="flex-1 grid sm:grid-cols-3 gap-2 text-xs">
+                        <input type="text" value="${p.title}" class="px-2 py-1 border rounded bg-white" placeholder="Judul" onchange="appData.portfolio[${idx}].title = this.value">
+                        <input type="text" value="${p.category}" class="px-2 py-1 border rounded bg-white" placeholder="Kategori" onchange="appData.portfolio[${idx}].category = this.value">
+                        <input type="text" value="${p.img}" class="px-2 py-1 border rounded bg-white text-[11px]" placeholder="URL Gambar" onchange="appData.portfolio[${idx}].img = this.value">
+                    </div>
+                    <button onclick="removePortfolioItem(${idx})" class="text-rose-500 hover:text-rose-700 p-1">
+                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            `).join('');
+            if (window.lucide) lucide.createIcons();
+        }
+
+        function addPortfolioItem() {
+            appData.portfolio.push({
+                title: "Proyek Baru",
+                category: "Creative Design",
+                img: "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=600&q=80",
+                desc: "Deskripsi singkat hasil proyek."
+            });
+            renderAdminPortfolioList();
+        }
+
+        function removePortfolioItem(idx) {
+            appData.portfolio.splice(idx, 1);
+            renderAdminPortfolioList();
+        }
+
+        function saveAllAdminChanges() {
+            // Read input values
+            appData.brandName = document.getElementById('input-brand-name').value.trim() || appData.brandName;
+            appData.whatsapp = document.getElementById('input-wa-number').value.trim() || appData.whatsapp;
+            appData.heroHeadline = document.getElementById('input-hero-headline').value.trim() || appData.heroHeadline;
+            appData.heroSubheadline = document.getElementById('input-hero-subheadline').value.trim() || appData.heroSubheadline;
+
+            // Save to localStorage
+            localStorage.setItem('etto_agency_cms_data', JSON.stringify(appData));
+
+            // Re-render Public Page
+            renderAll();
+
+            // Status message
+            const ind = document.getElementById('save-status-indicator');
+            ind.innerText = "✓ Berhasil disimpan ke memori lokal!";
+            ind.classList.add('text-emerald-600', 'font-bold');
+            setTimeout(() => {
+                ind.innerText = "Data tersinkron otomatis.";
+                ind.classList.remove('text-emerald-600', 'font-bold');
+            }, 3000);
+        }
+
+        function copyCurrentJSON() {
+            const raw = JSON.stringify(appData, null, 2);
+            navigator.clipboard.writeText(raw).then(() => {
+                alert("JSON berhasil disalin ke clipboard!");
+            });
+        }
+
+        function importJSONData() {
+            try {
+                const val = document.getElementById('json-raw-editor').value;
+                const parsed = JSON.parse(val);
+                appData = parsed;
+                localStorage.setItem('etto_agency_cms_data', JSON.stringify(appData));
+                renderAll();
+                alert("Data JSON berhasil dimuat dan disimpan!");
+            } catch(e) {
+                alert("Format JSON tidak valid: " + e.message);
+            }
+        }
+
+        function resetToFactoryDefault() {
+            if (confirm("Apakah Anda yakin ingin mengembalikan seluruh teks, harga, dan portofolio ke standar dokumen Etto Agency?")) {
+                appData = JSON.parse(JSON.stringify(DEFAULT_ETTO_DATA));
+                localStorage.removeItem('etto_agency_cms_data');
+                renderAll();
+                populateAdminFields();
+                switchAdminTab('general');
+                alert("Data berhasil direset ke standar.");
+            }
+        }
+
+        // Initialize on Load
+        document.addEventListener('DOMContentLoaded', () => {
+            initApp();
+        });
+    </script>
+</body>
+</html>
